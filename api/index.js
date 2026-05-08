@@ -8,6 +8,11 @@ const pedidosRoutes = require('../routes/pedidos')
 
 const app = express()
 
+const produtosRoutes =
+require('../routes/produtos')
+
+app.use('/produtos', produtosRoutes)
+
 app.use(cors())
 
 app.use(express.json())
